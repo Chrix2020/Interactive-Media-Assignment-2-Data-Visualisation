@@ -38,11 +38,51 @@ void setup() {
 
 Table table1;
 Table table2;
+Table table3;
+Table table4;
+Table table5;
+Table table6;
+Table table7;
+Table table8;
+Table table9;
+Table table10;
+Table table11;
+Table table12;
+Table table13;
+Table table14;
+Table table15;
+Table table16;
+Table table17;
+Table table18;
+Table table19;
+Table table20;
+Table table21;
+
 //load data, people counters 2019 and 2020//
 
 void loadData(){
 table1= loadTable("PC00.05-In 2019.csv", "header");
 table2= loadTable("PC00.05 In-2020.csv", "header");
+table3= loadTable("PC00.05-In-11052020.csv", "header");
+table4= loadTable("PC00.05-In-12052020.csv", "header");
+table5= loadTable("PC00.05-In-13052020.csv", "header");
+table6= loadTable("PC00.05-In-14052020.csv", "header");
+table7= loadTable("PC00.05-In-15052020.csv", "header");
+table8= loadTable("PC00.06-In-11052020.csv", "header");
+table9= loadTable("PC00.06-In-12052020.csv", "header");
+table10= loadTable("PC00.06-In-13052020.csv", "header");
+table11= loadTable("PC00.06-In-14052020.csv", "header");
+table12= loadTable("PC00.06-In-15052020.csv", "header");
+table13= loadTable("PC00.07-In-11052020.csv", "header");
+table14= loadTable("PC00.07-In-12052020.csv", "header");
+table15= loadTable("PC00.07-In-13052020.csv", "header");
+table16= loadTable("PC00.07-In-14052020.csv", "header");
+table17= loadTable("PC00.07-In-15052020.csv", "header");
+table18= loadTable("PC00.08-In-11052020.csv", "header");
+table19= loadTable("PC00.08-In-12052020.csv", "header");
+table20= loadTable("PC00.08-In-14052020.csv", "header");
+table21= loadTable("PC00.08-In-15052020.csv", "header");
+
 }
 
 //axis representing an array of data sensors//
