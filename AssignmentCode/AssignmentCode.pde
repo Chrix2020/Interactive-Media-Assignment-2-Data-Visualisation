@@ -4,16 +4,36 @@ int w=100;
 int h=40;
 
 float point1, point2, point3, point4;
-boolean toggleGraph1 = false;
-boolean toggleGraph2 = false;
+
+boolean[] graphs;
+
+//Colours mapped to buttons
+color[] btnCol;
+
+//Selection of colours
+color[] colPool;
 
 color btnCol1 = color(0);
 color btnCol2 = color(0);
 
 void setup() {
-size (800, 600);
-loadData();
-fill(200,200,200);
+  size (800, 600);
+  loadData();
+  fill(200,200,200);
+  
+  graphs = new boolean[10];
+  
+  // Toggles off all graphs so none are displayed
+  for(int i = 0; i < graphs.length; i++){
+    graphs[i] = false;
+  }
+  
+  btnCol = new color[10];
+  
+  colPool = new color[10];
+  colPool[0] = color(200,25,25,100);
+  colPool[1] = color(25,25,200,100);
+  
 }
 
 Table table1;
@@ -40,20 +60,33 @@ void draw()
   text("6", width-width/5.2, height/1.975);
   rectbutton1();
   rectbutton2();
+  readyChart();
 }
 
-void drawChart(float point1, float point2, float point3, float point4, int colSelector){
-  noStroke();
-  switch(colSelector){
-    case 1:
-      fill(155,25,25,100);
-      break;
-    case 2:
-      fill(25,25,155,100);
-      break;
+void readyChart(){
+  for(int i = 0; i < graphs.length; i++){
+    if(graphs[i])
+    drawChart(i);
   }
-  
+}
 
+void drawChart(int graphNo){
+  noStroke();
+
+  fill(colPool[graphNo]);
+  
+  if(graphNo == 0){
+    point1 = 110;
+    point2 = 130;
+    point3 = 140;
+    point4 = 170;
+  }
+  if(graphNo == 1){
+    point1 = 200;
+    point2 = 150;
+    point3 = 100;
+    point4 = 120;
+  }
   
   beginShape();
   vertex(width/2, height/2-point1);
@@ -66,42 +99,42 @@ void drawChart(float point1, float point2, float point3, float point4, int colSe
 
 void rectbutton1(){
   stroke(0);
-  fill(btnCol1);
+  fill(btnCol[0]);
   rect(x,y,w,h);
   if(mousePressed){
     if(mouseX>x && mouseX <x+w && mouseY>y && mouseY <y+h){
-      if(toggleGraph1){
-        btnCol1 = color(0);
-        toggleGraph1 = false;
-      }
-      else{
-        btnCol1 = color(255,50,50);
-        toggleGraph1 = true;
-      }
+      toggleGraph(0);
     }
-  }
-  if(toggleGraph1){
-    drawChart(100, 200, 100, 100, 1);
   }
 }
 
 void rectbutton2(){
   stroke(0);
-  fill(btnCol2);
+  fill(btnCol[1]);
   rect(x+w*1.5,y,w,h);
   if(mousePressed){
     if(mouseX>x+w*1.5 && mouseX <x+w*2.5 && mouseY>y && mouseY <y+h){
-      if(toggleGraph1){
-        btnCol2 = color(0);
-        toggleGraph2 = false;
-      }
-      else{
-        btnCol2 = color(50,50,255);
-        toggleGraph2 = true;
-      }
+      toggleGraph(1);
     }
   }
-  if(toggleGraph2){
-    drawChart(150,200, 50, 175, 2);
+}
+
+void keyPressed(){
+  if(key == '1'){
+    toggleGraph(0);
+  }
+  if(key == '2'){
+    toggleGraph(1);
+  }
+}
+
+void toggleGraph(int graphNo){
+  if(graphs[graphNo] == true){
+    btnCol[graphNo] = color(0);
+    graphs[graphNo] = false;
+  }
+  else{
+    btnCol[graphNo] = colPool[graphNo];
+    graphs[graphNo] = true;
   }
 }
