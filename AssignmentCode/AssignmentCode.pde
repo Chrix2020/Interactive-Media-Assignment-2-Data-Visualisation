@@ -5,6 +5,11 @@ int h=40;
 
 float point1, point2, point3, point4;
 
+Table[] PC0005;
+Table[] PC0006;
+Table[] PC0007;
+Table[] PC0008;
+
 boolean[] graphs;
 
 //Colours mapped to buttons
@@ -43,15 +48,35 @@ void setup() {
   colPool[2] = color(100,25,50,100);
   colPool[3] = color(10,25,70,100); 
   colPool[4] = color(20,25,30,100); 
-}
-
-Table table1;
-Table table2;
-//load data, people counters 2019 and 2020//
-
-void loadData(){
-table1= loadTable("PC00.05-In 2019.csv", "header");
-table2= loadTable("PC00.05 In-2020.csv", "header");
+  
+  PC0005 = new Table[5];
+  PC0005[0] = loadTable();
+  PC0005[1] = loadTable();
+  PC0005[2] = loadTable();
+  PC0005[3] = loadTable();
+  PC0005[4] = loadTable();
+  
+  PC0006 = new Table[5];
+  PC0006[0] = loadTable();
+  PC0006[1] = loadTable();
+  PC0006[2] = loadTable();
+  PC0006[3] = loadTable();
+  PC0006[4] = loadTable();
+  
+  PC0007 = new Table[5];
+  PC0007[0] = loadTable();
+  PC0007[1] = loadTable();
+  PC0007[2] = loadTable();
+  PC0007[3] = loadTable();
+  PC0007[4] = loadTable();
+  
+  PC0008 = new Table[5];
+  PC0008[0] = loadTable();
+  PC0008[1] = loadTable();
+  PC0008[2] = loadTable();
+  PC0008[3] = loadTable();
+  PC0008[4] = loadTable();
+  
 }
 
 //axis representing an array of data sensors//
@@ -213,4 +238,17 @@ void toggleGraph(int graphNo){
     btnCol[graphNo] = colPool[graphNo];
     graphs[graphNo] = true;
   }
+}
+
+int findMax(Table table){
+  int max = 0;
+  int current = 0;
+  
+  for(int i = 0; i < table.getRowCount(); i++){
+    current = table.getInt(i, 1);
+    if(current > max)
+    max = current;
+  }
+  
+  return max;
 }
