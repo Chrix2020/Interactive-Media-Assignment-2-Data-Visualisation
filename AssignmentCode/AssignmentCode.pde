@@ -76,12 +76,6 @@ void setup() {
   PC0008[3] = loadTable("PC00.08-In-14052020.csv");
   PC0008[4] = loadTable("PC00.08-In-15052020.csv");
   
-  int max = findMax(PC0005[0]);
-  int max1 = findMax(PC0006[0]);
-  int max2 = findMax(PC0007[0]);
-  int max3 = findMax(PC0008[0]);
-  print(max + " " + max1 + " " + max2 + " " +max3 + " ");
-  
 }
 
 //axis representing an array of data sensors//
@@ -121,44 +115,44 @@ void drawChart(int graphNo){
   fill(colPool[graphNo]);
 
   if(graphNo == 0){
-    point1 = 18;
-    point2 = 21;
-    point3 = 15;
-    point4 = 16;
+    point1 = findMax(PC0005[graphNo]);
+    point2 = findMax(PC0008[graphNo]);
+    point3 = findMax(PC0006[graphNo]);
+    point4 = findMax(PC0007[graphNo]);
   }
   if(graphNo == 1){
-    point1 = 200;
-    point2 = 150;
-    point3 = 100;
-    point4 = 120;
+    point1 = findMax(PC0005[graphNo]);
+    point2 = findMax(PC0008[graphNo]);
+    point3 = findMax(PC0006[graphNo]);
+    point4 = findMax(PC0007[graphNo]);
   }
 
   if(graphNo == 2){
-    point1 = 290;
-    point2 = 170;
-    point3 = 70;
-    point4 = 100;
+    point1 = findMax(PC0005[graphNo]);
+    point2 = findMax(PC0008[graphNo]);
+    point3 = findMax(PC0006[graphNo]);
+    point4 = findMax(PC0007[graphNo]);
   }
 
   if(graphNo == 3){
-    point1 = 320;
-    point2 = 190;
-    point3 = 50;
-    point4 = 80;
+    point1 = findMax(PC0005[graphNo]);
+    point2 = findMax(PC0008[graphNo]);
+    point3 = findMax(PC0006[graphNo]);
+    point4 = findMax(PC0007[graphNo]);
   }
 
   if(graphNo == 4){
-    point1 = 30;
-    point2 = 140;
-    point3 = 20;
-    point4 = 200;
+    point1 = findMax(PC0005[graphNo]);
+    point2 = findMax(PC0008[graphNo]);
+    point3 = findMax(PC0006[graphNo]);
+    point4 = findMax(PC0007[graphNo]);
   }
 
   beginShape();
-  vertex(width/2, height/2-point1);
-  vertex(width/2+point2, height/2);
-  vertex(width/2, height/2+point3);
-  vertex(width/2-point4, height/2);
+  vertex(width/2, height/2-point1*10);
+  vertex(width/2+point2*10, height/2);
+  vertex(width/2, height/2+point3*10);
+  vertex(width/2-point4*10, height/2);
   endShape();
 
 }
