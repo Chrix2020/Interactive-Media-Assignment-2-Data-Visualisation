@@ -30,7 +30,6 @@ boolean graphOver2 = false;
 
 void setup() {
   size (800, 600);
-  loadData();
   fill(200,200,200);
 
   graphs = new boolean[10];
@@ -50,38 +49,45 @@ void setup() {
   colPool[4] = color(20,25,30,100); 
   
   PC0005 = new Table[5];
-  PC0005[0] = loadTable();
-  PC0005[1] = loadTable();
-  PC0005[2] = loadTable();
-  PC0005[3] = loadTable();
-  PC0005[4] = loadTable();
+  PC0005[0] = loadTable("PC00.05-In-11052020.csv");
+  PC0005[1] = loadTable("PC00.05-In-12052020.csv");
+  PC0005[2] = loadTable("PC00.05-In-13052020.csv");
+  PC0005[3] = loadTable("PC00.05-In-14052020.csv");
+  PC0005[4] = loadTable("PC00.05-In-15052020.csv");
   
   PC0006 = new Table[5];
-  PC0006[0] = loadTable();
-  PC0006[1] = loadTable();
-  PC0006[2] = loadTable();
-  PC0006[3] = loadTable();
-  PC0006[4] = loadTable();
+  PC0006[0] = loadTable("PC00.06-In-11052020.csv");
+  PC0006[1] = loadTable("PC00.06-In-12052020.csv");
+  PC0006[2] = loadTable("PC00.06-In-13052020.csv");
+  PC0006[3] = loadTable("PC00.06-In-14052020.csv");
+  PC0006[4] = loadTable("PC00.06-In-15052020.csv");
   
   PC0007 = new Table[5];
-  PC0007[0] = loadTable();
-  PC0007[1] = loadTable();
-  PC0007[2] = loadTable();
-  PC0007[3] = loadTable();
-  PC0007[4] = loadTable();
+  PC0007[0] = loadTable("PC00.07-In-11052020.csv");
+  PC0007[1] = loadTable("PC00.07-In-12052020.csv");
+  PC0007[2] = loadTable("PC00.07-In-13052020.csv");
+  PC0007[3] = loadTable("PC00.07-In-14052020.csv");
+  PC0007[4] = loadTable("PC00.07-In-15052020.csv");
   
   PC0008 = new Table[5];
-  PC0008[0] = loadTable();
-  PC0008[1] = loadTable();
-  PC0008[2] = loadTable();
-  PC0008[3] = loadTable();
-  PC0008[4] = loadTable();
+  PC0008[0] = loadTable("PC00.08-In-11052020.csv");
+  PC0008[1] = loadTable("PC00.08-In-12052020.csv");
+  PC0008[2] = loadTable("PC00.08-In-13052020.csv");
+  PC0008[3] = loadTable("PC00.08-In-14052020.csv");
+  PC0008[4] = loadTable("PC00.08-In-15052020.csv");
+  
+  int max = findMax(PC0005[0]);
+  int max1 = findMax(PC0006[0]);
+  int max2 = findMax(PC0007[0]);
+  int max3 = findMax(PC0008[0]);
+  print(max + " " + max1 + " " + max2 + " " +max3 + " ");
   
 }
 
 //axis representing an array of data sensors//
 void draw()
 {
+  
   fill(255);
   rect(0,0, width, height);
   fill(0);
@@ -241,14 +247,11 @@ void toggleGraph(int graphNo){
 }
 
 int findMax(Table table){
-  int max = 0;
-  int current = 0;
+  int maxPeople = 0;
   
   for(int i = 0; i < table.getRowCount(); i++){
-    current = table.getInt(i, 1);
-    if(current > max)
-    max = current;
+    maxPeople = max(maxPeople, table.getInt(i, 1));
   }
   
-  return max;
+  return maxPeople;
 }
