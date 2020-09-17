@@ -99,10 +99,21 @@ image(img, 50, 0);
   text("PC00.08", width-width/5.2, height/1.975);
 
   rectbutton1();
+  fill(255);
+  textSize(13);
+  text("11/05/2020", x+11, height/1.045);
   rectbutton2();
+  fill(255);
+  text("12/05/2020", x+161, height/1.045);
   rectbutton3();
+  fill(255);
+  text("13/05/2020", x+311, height/1.045);
   rectbutton4();
+  fill(255);
+  text("14/05/2020", x+461, height/1.045);
   rectbutton5();
+  fill(255);
+  text("15/05/2020", x+611, height/1.045);
   readyChart();
 }
 
