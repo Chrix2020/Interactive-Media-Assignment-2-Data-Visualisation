@@ -46,9 +46,9 @@ void setup() {
   colPool = new color[10];
   colPool[0] = color(200, 25, 25, 100);
   colPool[1] = color(25, 25, 200, 100);
-  colPool[2] = color(100, 25, 50, 100);
-  colPool[3] = color(10, 25, 70, 100); 
-  colPool[4] = color(20, 25, 30, 100); 
+  colPool[2] = color(100, 200, 255, 100);
+  colPool[3] = color(60, 135 , 118, 100); 
+  colPool[4] = color(255, 141, 82, 100); 
 
   PC0005 = new Table[5];
   PC0005[0] = loadTable("PC00.05-In-11052020.csv");
@@ -94,19 +94,19 @@ void draw()
   text("PC00.08", width-width/5.2, height/1.975);
 
   rectbutton1();
-  fill(#D35353);
+  fill(255);
   text("11/05/20",x+20,y+25);
   rectbutton2();
-  fill(#D35353);
+  fill(255);
   text("12/05/20",x+170,y+25);
   rectbutton3();
-  fill(#D35353);
+  fill(255);
   text("13/05/20",x+320,y+25);
   rectbutton4();
-  fill(#D35353);
+  fill(255);
   text("14/05/20",x+470,y+25);
   rectbutton5();
-  fill(#D35353);
+  fill(255);
   text("15/05/20",x+620,y+25);
   readyChart();
 }
