@@ -26,7 +26,9 @@ color btnCol3 = color(0);
 color btnCol4 = color(0);
 color btnCol5 = color(0);
 
-PImage img;
+PImage img1;
+PImage img2;
+PImage img3;
 
 void setup() {
   size (1280, 720);
@@ -85,10 +87,6 @@ void setup() {
 //axis representing an array of data sensors//
 void draw()
 {
-//img = loadImage("b11.jpg");
-//image(img, x, y);
-//tint(255, 126);  // Apply transparency without changing color
-//image(img, 50, 0);
   fill(255);
   rect(0, 0, width, height);
   fill(0);
@@ -100,7 +98,13 @@ void draw()
   line(width/2-(height-height/8.7-height/8)/2, height/2, width/2, height/2);
   text("PC00.07", width/2+(height-height/8.7-height/8)/2, height/1.98);
   text("PC00.08", width/2-(height-height/8.7-height/8)/1.65, height/1.975);
-
+  
+  textSize(28);
+  text("Data Visualisation - People Counters (B11)", 0+x/3, x/3);
+  textSize(12);
+  String s = "Guide: Click on each button to see the different days people entered B11 at different entrances. Hover over the buttons to see the numeric values";
+  text(s, 0+x/3, 1.5*x/3,width/2.5,height/3);
+  BackgroundImage();
   rectbutton1();
   fill(255);
   textSize(13);

@@ -90,6 +90,27 @@ void rectbutton5() {
   }
 }
 
+  void BackgroundImage(){
+//img1 = loadImage("b11.png");
+//tint(255, 128); 
+//image(img1, x, x+150, width/4,height/4);
+
+img2 = loadImage("sky.png");
+tint(255, 100); 
+imageMode(CENTER);
+image(img2, 0, 0, width*2,height*2);
+
+img2 = loadImage("ppl.png");
+tint(255, 128); 
+imageMode(CENTER);
+image(img2, width-w, y-height/8, width/4,height/4);
+
+//img2 = loadImage("b11.1.png");
+//tint(255, 100); 
+//imageMode(CENTER);
+//image(img2, x, x+150, width*1.9,(height*0.9)-150);
+}
+
 //Loads a particular chart whenever a number on the keyboard is pressed //
 void keyPressed() {
   if (key == '1') {
