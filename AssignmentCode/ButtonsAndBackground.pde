@@ -90,20 +90,20 @@ void rectbutton5() {
   }
 }
 
-  void BackgroundImage(){
-//img1 = loadImage("b11.png");
-//tint(255, 128); 
-//image(img1, x, x+150, width/4,height/4);
+void BackgroundImage(){
+img1 = loadImage("b11.png");
+tint(255, 128); 
+image(img1, width-2.5*w, y-height/7, width/4,height/4);
 
 img2 = loadImage("sky.png");
 tint(255, 100); 
 imageMode(CENTER);
 image(img2, 0, 0, width*2,height*2);
 
-img2 = loadImage("ppl.png");
+img3 = loadImage("ppl.png");
 tint(255, 128); 
 imageMode(CENTER);
-image(img2, width-w, y-height/8, width/4,height/4);
+image(img3, width-w, y-height/14, width/10,height/10);
 
 //img2 = loadImage("b11.1.png");
 //tint(255, 100); 

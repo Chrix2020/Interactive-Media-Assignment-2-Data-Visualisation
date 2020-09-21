@@ -92,12 +92,13 @@ void draw()
   fill(0);
   stroke(0);
   line(width/2, height/8, width/2, height-height/8.7);
-  text("PC00.05", width/2.13, height/8.3);
-  text("PC00.06", width/2.13, height-height/10.8);
+  text("PC00.05", width/2.11, height/8.3);
+  text("PC00.06", width/2.11, height-height/10.8);
   line(width/2+(height-height/8.7-height/8)/2, height/2, width/2, height/2);
   line(width/2-(height-height/8.7-height/8)/2, height/2, width/2, height/2);
-  text("PC00.07", width/2+(height-height/8.7-height/8)/2, height/1.98);
-  text("PC00.08", width/2-(height-height/8.7-height/8)/1.65, height/1.975);
+  text("PC00.07", width/2-(height-height/8.7-height/8)/1.65, height/1.975);
+  text("PC00.08", width/2+(height-height/8.7-height/8)/2, height/1.98);
+
   
   textSize(28);
   text("Data Visualisation - People Counters (B11)", 0+x/3, x/3);
