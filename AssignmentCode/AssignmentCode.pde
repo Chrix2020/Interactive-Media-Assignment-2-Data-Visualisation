@@ -106,20 +106,20 @@ void draw()
   text(s, 0+x/3, 1.5*x/3,width/2.5,height/3);
   BackgroundImage();
   rectbutton1();
-  fill(255);
+  fill(#C431FF);
   textSize(13);
   text("11/05/2020", x+w/4.5, height/1.045);
   rectbutton2();
-  fill(255);
+  fill(#C431FF);
   text("12/05/2020", x*2+w+w/4.5, height/1.045);
   rectbutton3();
-  fill(255);
+  fill(#C431FF);
   text("13/05/2020", x*3+2*w+w/4.5, height/1.045);
   rectbutton4();
-  fill(255);
+  fill(#C431FF);
   text("14/05/2020", x*4+3*w+w/4.5, height/1.045);
   rectbutton5();
-  fill(255);
+  fill(#C431FF);
   text("15/05/2020", x*5+4*w+w/4.5, height/1.045);
   readyChart();
 }
