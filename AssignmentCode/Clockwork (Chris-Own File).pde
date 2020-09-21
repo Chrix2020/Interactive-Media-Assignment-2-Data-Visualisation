@@ -1,4 +1,4 @@
-// Measurements applied to each button displaying the different data sensors and values of the people counter // //<>//
+// Measurements applied to each button displaying the different data sensors and values of the people counter //
 int x=50;
 int y=550;
 int w=100;
@@ -316,26 +316,31 @@ void keyPressed() {
   }
   else
   graphs[0]= false;
+
   if (key == '2') {
     toggleGraph(1);
   }
   else
   graphs[1]= false;
+  
   if (key == '3') {
     toggleGraph(2);
   }
   else
   graphs[2]= false;
+
   if (key == '4') {
     toggleGraph(3);
   }
   else
   graphs[3]= false;
+ 
   if (key == '5') {
     toggleGraph(4);
   }
   else
   graphs[4]= false;
+
 }
 
 void toggleGraph(int graphNo) {
