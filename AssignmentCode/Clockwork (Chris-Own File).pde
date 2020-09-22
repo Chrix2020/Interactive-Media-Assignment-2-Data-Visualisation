@@ -50,7 +50,7 @@ void setup() {
     graphs[i] = false;
   }
   minim= new Minim(this);
-  Songs= minim.loadFile("EDM Drums.mp3", 1024);
+  Songs= minim.loadFile("Button.mp3", 1024);
   AP2= minim.loadFile("Elevator.mp3", 1024);
   
   AP2.play();
@@ -358,7 +358,6 @@ void keyPressed() {
   }
   else
   Songs.rewind();
-
 }
 
 void toggleGraph(int graphNo) {
