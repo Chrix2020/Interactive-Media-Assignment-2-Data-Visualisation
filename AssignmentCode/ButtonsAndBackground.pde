@@ -115,17 +115,27 @@ image(img3, width-w, y-height/14, width/10,height/10);
 void keyPressed() {
   if (key == '1') {
     toggleGraph(0);
+    ButtonSFX.rewind();
+    ButtonSFX.play();
   }
   if (key == '2') {
     toggleGraph(1);
+    ButtonSFX.rewind();
+    ButtonSFX.play();
   }
   if (key == '3') {
     toggleGraph(2);
+    ButtonSFX.rewind();
+    ButtonSFX.play();
   }
   if (key == '4') {
     toggleGraph(3);
+    ButtonSFX.rewind();
+    ButtonSFX.play();
   }
   if (key == '5') {
     toggleGraph(4);
+    ButtonSFX.rewind();
+    ButtonSFX.play();
   }
 }

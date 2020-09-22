@@ -1,3 +1,10 @@
+import ddf.minim.analysis.*;
+import ddf.minim.*;
+
+Minim minim;
+AudioPlayer ButtonSFX;
+AudioPlayer BGM;
+
 //Values used to draw and position the buttons;
 int x, y, w, h;
 
@@ -33,6 +40,12 @@ PImage img3;
 void setup() {
   size (1280, 720);
   fill(200, 200, 200);
+  
+  minim= new Minim(this);
+  ButtonSFX = minim.loadFile("Button.mp3", 1024);
+  BGM = minim.loadFile("Elevator.mp3", 1024);
+  BGM.play();
+  BGM.loop();
   
   x = 0+width/15;
   y = height-height/13;
@@ -103,7 +116,7 @@ void draw()
   textSize(28);
   text("Data Visualisation - People Counters (B11)", 0+x/3, x/3);
   textSize(12);
-  String s = "Guide: Click on each button to see the different days people entered B11 at different entrances. Hover over the buttons to see the numeric values";
+  String s = "Guide: Click on each button to see the different days people entered B11 at different entrances. Hover over the buttons when graphs are displayed to see the numeric values. Buttons can also be toggled by pressing numbers 1-5.";
   text(s, 0+x/3, 1.5*x/3,width/2.5,height/3);
   BackgroundImage();
   rectbutton1();
