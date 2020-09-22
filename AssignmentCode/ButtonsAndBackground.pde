@@ -8,11 +8,11 @@ void rectbutton1() {
       toggleGraph(0);
     }
     if (graphs[0] == true){
+      fill(0);
       text("PC00.05 value: " + findMax(PC0005[0]), x, height/3);
       text("PC00.06 value: " + findMax(PC0006[0]), x, height/3+h/2);
       text("PC00.07 value: " + findMax(PC0007[0]), x, height/3+h);
       text("PC00.08 value: " + findMax(PC0008[0]), x, height/3+h*1.5);
-      fill(0);
     }
   }
 }
@@ -26,11 +26,11 @@ void rectbutton2() {
       toggleGraph(1);
     }
     if (graphs[1] == true) {
+      fill(0);
       text("PC00.05 value: " + findMax(PC0005[1]), x, height/3);
       text("PC00.06 value: " + findMax(PC0006[1]), x, height/3+h/2);
       text("PC00.07 value: " + findMax(PC0007[1]), x, height/3+h);
       text("PC00.08 value: " + findMax(PC0008[1]), x, height/3+h*1.5);
-      fill(0);
     }
   }
 }
@@ -44,11 +44,11 @@ void rectbutton3() {
       toggleGraph(2);
     }
     if (graphs[2] == true) {
+      fill(0);
       text("PC00.05 value: " + findMax(PC0005[2]), x, height/3);
       text("PC00.06 value: " + findMax(PC0006[2]), x, height/3+h/2);
       text("PC00.07 value: " + findMax(PC0007[2]), x, height/3+h);
       text("PC00.08 value: " + findMax(PC0008[2]), x, height/3+h*1.5);
-      fill(0);
     }
   }
 }
@@ -62,11 +62,11 @@ void rectbutton4() {
       toggleGraph(3);
     }
     if (graphs[3] == true) {
+      fill(0);
       text("PC00.05 value: " + findMax(PC0005[3]), x, height/3);
       text("PC00.06 value: " + findMax(PC0006[3]), x, height/3+h/2);
       text("PC00.07 value: " + findMax(PC0007[3]), x, height/3+h);
       text("PC00.08 value: " + findMax(PC0008[3]), x, height/3+h*1.5);
-      fill(0);
     }
   }
 }
@@ -80,11 +80,11 @@ void rectbutton5() {
       toggleGraph(4);
     }
     if (graphs[4] == true) {
+      fill(0);
       text("PC00.05 value: " + findMax(PC0005[4]), x, height/3);
       text("PC00.06 value: " + findMax(PC0006[4]), x, height/3+h/2);
       text("PC00.07 value: " + findMax(PC0007[4]), x, height/3+h);
       text("PC00.08 value: " + findMax(PC0008[4]), x, height/3+h*1.5);
-      fill(0);
     }
     
   }
