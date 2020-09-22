@@ -221,7 +221,7 @@ void rectbutton1() {
       fill(0);
     }
     else
-    graphs[0] = true;
+    graphs[0] = false;
   }
 }
 
@@ -244,7 +244,7 @@ void rectbutton2() {
       fill(0);
     }
     else
-    graphs[1]= true;
+    graphs[1]= false;
   }
 }
 
@@ -267,7 +267,7 @@ void rectbutton3() {
       fill(0);
     }
     else
-    graphs[2]= true;
+    graphs[2]= false;
   }
 }
 
@@ -290,7 +290,7 @@ void rectbutton4() {
       fill(0);
     }
     else
-    graphs[3]= true;
+    graphs[3]= false;
   }
 }
 
@@ -313,7 +313,7 @@ void rectbutton5() {
       fill(0);
     }
     else
-    graphs[4]= true;
+    graphs[4]= false;
   }
 }
 
