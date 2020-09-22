@@ -1,3 +1,6 @@
+import ddf.minim.analysis.*;
+import ddf.minim.*;
+
 // Measurements applied to each button displaying the different data sensors and values of the people counter //
 int x=50;
 int y=550;
@@ -32,6 +35,9 @@ boolean graphOver2 = false;
 
 PImage img;
 
+Minim minim;
+AudioPlayer Songs;
+
 void setup() {
   size (800, 600);
   fill(200, 200, 200);
@@ -42,6 +48,8 @@ void setup() {
   for (int i = 0; i < graphs.length; i++) {
     graphs[i] = false;
   }
+  minim= new Minim(this);
+  Songs= minim.loadFile("EDM Drums.mp3", 1024);
 
   btnCol = new color[10];
 
@@ -203,7 +211,7 @@ void rectbutton1() {
       toggleGraph(0);
     }
     else
-    graphs[0]=true;
+    graphs[0]= true;
     
     if (graphs[0] == true){
       text("PC00.05 value: " + findMax(PC0005[0]), x, height/2+160);
@@ -313,33 +321,39 @@ void rectbutton5() {
 void keyPressed() {
   if (key == '1') {
     toggleGraph(0);
+    Songs.play();
   }
   else
-  graphs[0]= false;
+  Songs.rewind();
+
 
   if (key == '2') {
     toggleGraph(1);
+    Songs.play();
   }
   else
-  graphs[1]= false;
+  Songs.rewind();
   
   if (key == '3') {
     toggleGraph(2);
+    Songs.play();
   }
   else
-  graphs[2]= false;
+  Songs.rewind();
 
   if (key == '4') {
     toggleGraph(3);
+    Songs.play();
   }
   else
-  graphs[3]= false;
+  Songs.rewind();
  
   if (key == '5') {
     toggleGraph(4);
+    Songs.play();
   }
   else
-  graphs[4]= false;
+  Songs.rewind();
 
 }
 
@@ -367,6 +381,8 @@ int findMax(Table table) {
 void textMate(){
 fill(#2518ED);
 text("Data Visualisation Project: KROCC", 50, 25);
-text("Guide: Click on each button to see the different data sensors of", 50, 100);
-text("each people counter entering the entrances of Building 11. Hover over each button to see the maximum values of the people counter. ", 50, 125);
+text("Guide: Click on each button to see the different", 50, 100);
+text("data sensors of each people counter within the", 50, 120);
+text("entrances of Building 11. Hover each button to diaplay", 50, 140);
+text("the different maximum values for each counter. ", 50, 160);
 }
