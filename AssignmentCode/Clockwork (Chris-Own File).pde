@@ -37,6 +37,7 @@ PImage img;
 
 Minim minim;
 AudioPlayer Songs;
+AudioPlayer AP2;
 
 void setup() {
   size (800, 600);
@@ -50,6 +51,9 @@ void setup() {
   }
   minim= new Minim(this);
   Songs= minim.loadFile("EDM Drums.mp3", 1024);
+  AP2= minim.loadFile("Elevator.mp3", 1024);
+  
+  AP2.play();
 
   btnCol = new color[10];
 
